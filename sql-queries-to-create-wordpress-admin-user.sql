@@ -1,6 +1,10 @@
 -- phpMyAdmin SQL Dump
 -- Create A WordPress Admin User using SQL Queries in MySQL Database
--- assuming database table prefix is set to “wp_”
+-- Following queries will create a new WordPress user (with an Administrator role)
+-- Read more at: http://www.proy.info/create-a-wordpress-admin-user-via-mysql-database-using-phpmyadmin/ 
+
+-- assuming database name as `your_wp_database`, chanage this to your database name
+-- assuming database table prefix is set to “wp_”, chanage this to your database table prefix
 -- Read more at: http://www.proy.info/create-a-wordpress-admin-user-via-mysql-database-using-phpmyadmin/ 
 
 -- 
@@ -14,7 +18,9 @@ VALUES (NULL, 'newuser', MD5('new-password'), 'Site Admin', 'newuser@yourdomain.
 
 -- 
 -- INSERT QUERY
+-- assuming database table prefix is set to “wp_”
 -- Table: `wp_usermeta`
+-- assuming the new `ID` value in `wp_users` table is 2 and That is used in `user_id` column for the following INSERT query
 --
 
 -- --------------------------------------------------------
